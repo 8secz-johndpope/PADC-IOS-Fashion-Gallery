@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCollectionViewCell" id="gTV-IL-0wX" customClass="CategoriesCollectionViewCell" customModule="PADC_IOS_FashionGallery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="216"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="216"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVC-k1-hdh">
+                        <rect key="frame" x="8" y="8" width="170" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m2" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-ur-aGP">
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="AVD-41-zR8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN166FA1HSMIONAFAMZ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOT-XA-gaf">
+                                <rect key="frame" x="8" y="154" width="162" height="38"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJp-de-v16">
+                                <rect key="frame" x="107" y="12" width="55" height="20"/>
+                                <color key="backgroundColor" red="1" green="0.14978724669999999" blue="0.53925503419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="MPc-64-xeT"/>
+                                    <constraint firstAttribute="height" constant="20" id="kNV-Vx-3Ae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                <state key="normal" title="NEW">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F8z-ur-aGP" secondAttribute="trailing" id="2x0-WR-XQD"/>
+                            <constraint firstAttribute="bottom" secondItem="bOT-XA-gaf" secondAttribute="bottom" constant="8" id="8s1-bf-jZB"/>
+                            <constraint firstItem="F8z-ur-aGP" firstAttribute="leading" secondItem="TVC-k1-hdh" secondAttribute="leading" id="9gf-Hh-itF"/>
+                            <constraint firstItem="F8z-ur-aGP" firstAttribute="top" secondItem="TVC-k1-hdh" secondAttribute="top" id="MHO-ht-Nk0"/>
+                            <constraint firstAttribute="trailing" secondItem="bOT-XA-gaf" secondAttribute="trailing" id="cDb-6U-hUQ"/>
+                            <constraint firstItem="bOT-XA-gaf" firstAttribute="leading" secondItem="TVC-k1-hdh" secondAttribute="leading" constant="8" id="jVt-vx-WM7"/>
+                            <constraint firstAttribute="trailing" secondItem="lJp-de-v16" secondAttribute="trailing" constant="8" id="jbe-0f-W1O"/>
+                            <constraint firstItem="lJp-de-v16" firstAttribute="top" secondItem="TVC-k1-hdh" secondAttribute="top" constant="12" id="mjE-LH-QWC"/>
+                            <constraint firstItem="bOT-XA-gaf" firstAttribute="top" secondItem="F8z-ur-aGP" secondAttribute="bottom" constant="4" id="sQh-XB-GiD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="TVC-k1-hdh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="1MP-hc-s6D"/>
+                <constraint firstItem="TVC-k1-hdh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="7mb-aA-fgo"/>
+                <constraint firstAttribute="trailing" secondItem="TVC-k1-hdh" secondAttribute="trailing" constant="8" id="EWA-0F-RUT"/>
+                <constraint firstAttribute="bottom" secondItem="TVC-k1-hdh" secondAttribute="bottom" constant="8" id="NNv-Dl-YuY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="186" height="216"/>
+            <connections>
+                <outlet property="item_image" destination="F8z-ur-aGP" id="9hk-MK-WLw"/>
+                <outlet property="item_name" destination="bOT-XA-gaf" id="tP5-64-85P"/>
+            </connections>
+            <point key="canvasLocation" x="-41.600000000000001" y="66.566716641679164"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="m2" width="225" height="225"/>
+    </resources>
+</document>
