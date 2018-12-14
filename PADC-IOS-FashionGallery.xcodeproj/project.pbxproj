@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64E02A25B7F391E90326399C /* Pods_PADC_IOS_FashionGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B63D2425814DACEF71ED14 /* Pods_PADC_IOS_FashionGallery.framework */; };
+		8C6EBED721BEB43100C1E90A /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EBED621BEB43100C1E90A /* ShopViewController.swift */; };
+		8C6EBED921BEB9FB00C1E90A /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EBED821BEB9FB00C1E90A /* CosmosRating.swift */; };
+		8C6EBEDB21BECBCA00C1E90A /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EBEDA21BECBCA00C1E90A /* ItemViewController.swift */; };
+		8C6EBEDD21BECC1D00C1E90A /* ShopMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EBEDC21BECC1D00C1E90A /* ShopMoreViewController.swift */; };
+		8CB0FD5B21BBB7FE00190C5A /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0FD5921BBB7FE00190C5A /* PopularCollectionViewCell.swift */; };
+		8CB0FD5C21BBB7FE00190C5A /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB0FD5A21BBB7FE00190C5A /* PopularCollectionViewCell.xib */; };
+		8CB0FD5F21BBB84600190C5A /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0FD5D21BBB84600190C5A /* PromotionCollectionViewCell.swift */; };
+		8CB0FD6021BBB84600190C5A /* PromotionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB0FD5E21BBB84600190C5A /* PromotionCollectionViewCell.xib */; };
+		8CB0FD6321BBB86C00190C5A /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0FD6121BBB86C00190C5A /* CategoriesCollectionViewCell.swift */; };
+		8CB0FD6421BBB86C00190C5A /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB0FD6221BBB86C00190C5A /* CategoriesCollectionViewCell.xib */; };
+		8CB0FD6721BBB91700190C5A /* JustForYouCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0FD6521BBB91700190C5A /* JustForYouCollectionViewCell.swift */; };
+		8CB0FD6821BBB91700190C5A /* JustForYouCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB0FD6621BBB91700190C5A /* JustForYouCollectionViewCell.xib */; };
+		8CB0FD6B21BBD04F00190C5A /* FashionCollectionsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0FD6921BBD04F00190C5A /* FashionCollectionsViewCell.swift */; };
+		8CB0FD6C21BBD04F00190C5A /* FashionCollectionsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB0FD6A21BBD04F00190C5A /* FashionCollectionsViewCell.xib */; };
+		8CB0FD7021BBD12200190C5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0FD6F21BBD12200190C5A /* CardView.swift */; };
+		8CB0FD7221BC2ECD00190C5A /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0FD7121BC2ECD00190C5A /* RatingController.swift */; };
+		8CB39B0D21BB7ED80070EED3 /* CellRegisterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB39B0C21BB7ED80070EED3 /* CellRegisterUtil.swift */; };
+		8CB39B1021BB80800070EED3 /* AdsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB39B0E21BB80800070EED3 /* AdsCollectionViewCell.swift */; };
+		8CB39B1121BB80800070EED3 /* AdsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB39B0F21BB80800070EED3 /* AdsCollectionViewCell.xib */; };
+		8CC9045421BAD80F00479128 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9045321BAD80F00479128 /* HomeViewController.swift */; };
+		8CFF0F5021C3F42900EC5A8A /* ShopListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF0F4E21C3F42900EC5A8A /* ShopListsTableViewCell.swift */; };
+		8CFF0F5121C3F42900EC5A8A /* ShopListsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFF0F4F21C3F42900EC5A8A /* ShopListsTableViewCell.xib */; };
+		8CFF0F5421C40BA300EC5A8A /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF0F5221C40BA300EC5A8A /* PostsTableViewCell.swift */; };
+		8CFF0F5521C40BA300EC5A8A /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFF0F5321C40BA300EC5A8A /* PostsTableViewCell.xib */; };
+		8CFF0F5721C4279E00EC5A8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF0F5621C4279E00EC5A8A /* DetailViewController.swift */; };
 		99C090B221B3B048000F6CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C090B121B3B048000F6CAE /* AppDelegate.swift */; };
 		99C090B421B3B048000F6CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C090B321B3B048000F6CAE /* ViewController.swift */; };
 		99C090B721B3B048000F6CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C090B521B3B048000F6CAE /* Main.storyboard */; };
@@ -15,6 +41,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CEA0A7ADE0A42A80DCCC89A /* Pods-PADC-IOS-FashionGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PADC-IOS-FashionGallery.debug.xcconfig"; path = "Target Support Files/Pods-PADC-IOS-FashionGallery/Pods-PADC-IOS-FashionGallery.debug.xcconfig"; sourceTree = "<group>"; };
+		128564275D0D15AB0699CD65 /* Pods-PADC-IOS-FashionGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PADC-IOS-FashionGallery.release.xcconfig"; path = "Target Support Files/Pods-PADC-IOS-FashionGallery/Pods-PADC-IOS-FashionGallery.release.xcconfig"; sourceTree = "<group>"; };
+		8C6EBED621BEB43100C1E90A /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		8C6EBED821BEB9FB00C1E90A /* CosmosRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosRating.swift; sourceTree = "<group>"; };
+		8C6EBEDA21BECBCA00C1E90A /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		8C6EBEDC21BECC1D00C1E90A /* ShopMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMoreViewController.swift; sourceTree = "<group>"; };
+		8CB0FD5921BBB7FE00190C5A /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CB0FD5A21BBB7FE00190C5A /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
+		8CB0FD5D21BBB84600190C5A /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CB0FD5E21BBB84600190C5A /* PromotionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionCollectionViewCell.xib; sourceTree = "<group>"; };
+		8CB0FD6121BBB86C00190C5A /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CB0FD6221BBB86C00190C5A /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		8CB0FD6521BBB91700190C5A /* JustForYouCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustForYouCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CB0FD6621BBB91700190C5A /* JustForYouCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JustForYouCollectionViewCell.xib; sourceTree = "<group>"; };
+		8CB0FD6921BBD04F00190C5A /* FashionCollectionsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionCollectionsViewCell.swift; sourceTree = "<group>"; };
+		8CB0FD6A21BBD04F00190C5A /* FashionCollectionsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FashionCollectionsViewCell.xib; sourceTree = "<group>"; };
+		8CB0FD6F21BBD12200190C5A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		8CB0FD7121BC2ECD00190C5A /* RatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
+		8CB39B0C21BB7ED80070EED3 /* CellRegisterUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRegisterUtil.swift; sourceTree = "<group>"; };
+		8CB39B0E21BB80800070EED3 /* AdsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CB39B0F21BB80800070EED3 /* AdsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsCollectionViewCell.xib; sourceTree = "<group>"; };
+		8CC9045321BAD80F00479128 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8CFF0F4E21C3F42900EC5A8A /* ShopListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListsTableViewCell.swift; sourceTree = "<group>"; };
+		8CFF0F4F21C3F42900EC5A8A /* ShopListsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopListsTableViewCell.xib; sourceTree = "<group>"; };
+		8CFF0F5221C40BA300EC5A8A /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		8CFF0F5321C40BA300EC5A8A /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
+		8CFF0F5621C4279E00EC5A8A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		99C090AE21B3B048000F6CAE /* PADC-IOS-FashionGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PADC-IOS-FashionGallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C090B121B3B048000F6CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99C090B321B3B048000F6CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +75,7 @@
 		99C090B821B3B049000F6CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99C090BB21B3B049000F6CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99C090BD21B3B049000F6CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5B63D2425814DACEF71ED14 /* Pods_PADC_IOS_FashionGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PADC_IOS_FashionGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +83,83 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E02A25B7F391E90326399C /* Pods_PADC_IOS_FashionGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72C34130D97CCE96A0A76529 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5B63D2425814DACEF71ED14 /* Pods_PADC_IOS_FashionGallery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		770A1BA620DA75D2F786E977 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CEA0A7ADE0A42A80DCCC89A /* Pods-PADC-IOS-FashionGallery.debug.xcconfig */,
+				128564275D0D15AB0699CD65 /* Pods-PADC-IOS-FashionGallery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8CB0FD5821BBB79700190C5A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8CB39B0E21BB80800070EED3 /* AdsCollectionViewCell.swift */,
+				8CB39B0F21BB80800070EED3 /* AdsCollectionViewCell.xib */,
+				8CB0FD5921BBB7FE00190C5A /* PopularCollectionViewCell.swift */,
+				8CB0FD5A21BBB7FE00190C5A /* PopularCollectionViewCell.xib */,
+				8CB0FD5D21BBB84600190C5A /* PromotionCollectionViewCell.swift */,
+				8CB0FD5E21BBB84600190C5A /* PromotionCollectionViewCell.xib */,
+				8CB0FD6121BBB86C00190C5A /* CategoriesCollectionViewCell.swift */,
+				8CB0FD6221BBB86C00190C5A /* CategoriesCollectionViewCell.xib */,
+				8CB0FD6521BBB91700190C5A /* JustForYouCollectionViewCell.swift */,
+				8CB0FD6621BBB91700190C5A /* JustForYouCollectionViewCell.xib */,
+				8CB0FD6921BBD04F00190C5A /* FashionCollectionsViewCell.swift */,
+				8CB0FD6A21BBD04F00190C5A /* FashionCollectionsViewCell.xib */,
+				8CFF0F4E21C3F42900EC5A8A /* ShopListsTableViewCell.swift */,
+				8CFF0F4F21C3F42900EC5A8A /* ShopListsTableViewCell.xib */,
+				8CFF0F5221C40BA300EC5A8A /* PostsTableViewCell.swift */,
+				8CFF0F5321C40BA300EC5A8A /* PostsTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		8CB0FD6D21BBD09500190C5A /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				99C090B321B3B048000F6CAE /* ViewController.swift */,
+				8CC9045321BAD80F00479128 /* HomeViewController.swift */,
+				8C6EBED621BEB43100C1E90A /* ShopViewController.swift */,
+				8C6EBEDA21BECBCA00C1E90A /* ItemViewController.swift */,
+				8C6EBEDC21BECC1D00C1E90A /* ShopMoreViewController.swift */,
+				8CFF0F5621C4279E00EC5A8A /* DetailViewController.swift */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		8CB0FD6E21BBD0F900190C5A /* component */ = {
+			isa = PBXGroup;
+			children = (
+				8CB0FD6F21BBD12200190C5A /* CardView.swift */,
+				8CB0FD7121BC2ECD00190C5A /* RatingController.swift */,
+				8C6EBED821BEB9FB00C1E90A /* CosmosRating.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
 		99C090A521B3B048000F6CAE = {
 			isa = PBXGroup;
 			children = (
 				99C090B021B3B048000F6CAE /* PADC-IOS-FashionGallery */,
 				99C090AF21B3B048000F6CAE /* Products */,
+				770A1BA620DA75D2F786E977 /* Pods */,
+				72C34130D97CCE96A0A76529 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +174,15 @@
 		99C090B021B3B048000F6CAE /* PADC-IOS-FashionGallery */ = {
 			isa = PBXGroup;
 			children = (
+				8CB0FD6E21BBD0F900190C5A /* component */,
+				8CB0FD6D21BBD09500190C5A /* viewcontroller */,
+				8CB0FD5821BBB79700190C5A /* cell */,
 				99C090B121B3B048000F6CAE /* AppDelegate.swift */,
-				99C090B321B3B048000F6CAE /* ViewController.swift */,
 				99C090B521B3B048000F6CAE /* Main.storyboard */,
 				99C090B821B3B049000F6CAE /* Assets.xcassets */,
 				99C090BA21B3B049000F6CAE /* LaunchScreen.storyboard */,
 				99C090BD21B3B049000F6CAE /* Info.plist */,
+				8CB39B0C21BB7ED80070EED3 /* CellRegisterUtil.swift */,
 			);
 			path = "PADC-IOS-FashionGallery";
 			sourceTree = "<group>";
@@ -71,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99C090C021B3B049000F6CAE /* Build configuration list for PBXNativeTarget "PADC-IOS-FashionGallery" */;
 			buildPhases = (
+				8339C0D78B59F7E69F549CD3 /* [CP] Check Pods Manifest.lock */,
 				99C090AA21B3B048000F6CAE /* Sources */,
 				99C090AB21B3B048000F6CAE /* Frameworks */,
 				99C090AC21B3B048000F6CAE /* Resources */,
+				4509886DB27CBFC6E9CA9F3F /* [CP] Embed Pods Frameworks */,
+				7AA0BC77BB60717A34E5F148 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,21 +248,147 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFF0F5521C40BA300EC5A8A /* PostsTableViewCell.xib in Resources */,
 				99C090BC21B3B049000F6CAE /* LaunchScreen.storyboard in Resources */,
+				8CB0FD6C21BBD04F00190C5A /* FashionCollectionsViewCell.xib in Resources */,
+				8CB39B1121BB80800070EED3 /* AdsCollectionViewCell.xib in Resources */,
 				99C090B921B3B049000F6CAE /* Assets.xcassets in Resources */,
 				99C090B721B3B048000F6CAE /* Main.storyboard in Resources */,
+				8CB0FD6821BBB91700190C5A /* JustForYouCollectionViewCell.xib in Resources */,
+				8CB0FD6421BBB86C00190C5A /* CategoriesCollectionViewCell.xib in Resources */,
+				8CB0FD6021BBB84600190C5A /* PromotionCollectionViewCell.xib in Resources */,
+				8CB0FD5C21BBB7FE00190C5A /* PopularCollectionViewCell.xib in Resources */,
+				8CFF0F5121C3F42900EC5A8A /* ShopListsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4509886DB27CBFC6E9CA9F3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PADC-IOS-FashionGallery/Pods-PADC-IOS-FashionGallery-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CarbonKit/CarbonKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CarbonKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PADC-IOS-FashionGallery/Pods-PADC-IOS-FashionGallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AA0BC77BB60717A34E5F148 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PADC-IOS-FashionGallery/Pods-PADC-IOS-FashionGallery-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PADC-IOS-FashionGallery/Pods-PADC-IOS-FashionGallery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8339C0D78B59F7E69F549CD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PADC-IOS-FashionGallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		99C090AA21B3B048000F6CAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB0FD5B21BBB7FE00190C5A /* PopularCollectionViewCell.swift in Sources */,
+				8CB39B0D21BB7ED80070EED3 /* CellRegisterUtil.swift in Sources */,
+				8C6EBEDB21BECBCA00C1E90A /* ItemViewController.swift in Sources */,
+				8C6EBEDD21BECC1D00C1E90A /* ShopMoreViewController.swift in Sources */,
+				8CB0FD7221BC2ECD00190C5A /* RatingController.swift in Sources */,
+				8CB0FD6321BBB86C00190C5A /* CategoriesCollectionViewCell.swift in Sources */,
+				8C6EBED721BEB43100C1E90A /* ShopViewController.swift in Sources */,
+				8CB0FD5F21BBB84600190C5A /* PromotionCollectionViewCell.swift in Sources */,
+				8CFF0F5021C3F42900EC5A8A /* ShopListsTableViewCell.swift in Sources */,
+				8CB0FD6721BBB91700190C5A /* JustForYouCollectionViewCell.swift in Sources */,
+				8CFF0F5721C4279E00EC5A8A /* DetailViewController.swift in Sources */,
 				99C090B421B3B048000F6CAE /* ViewController.swift in Sources */,
+				8CB0FD6B21BBD04F00190C5A /* FashionCollectionsViewCell.swift in Sources */,
+				8CB39B1021BB80800070EED3 /* AdsCollectionViewCell.swift in Sources */,
 				99C090B221B3B048000F6CAE /* AppDelegate.swift in Sources */,
+				8CB0FD7021BBD12200190C5A /* CardView.swift in Sources */,
+				8CFF0F5421C40BA300EC5A8A /* PostsTableViewCell.swift in Sources */,
+				8C6EBED921BEB9FB00C1E90A /* CosmosRating.swift in Sources */,
+				8CC9045421BAD80F00479128 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +532,11 @@
 		};
 		99C090C121B3B049000F6CAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CEA0A7ADE0A42A80DCCC89A /* Pods-PADC-IOS-FashionGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LUA29KCT7G;
 				INFOPLIST_FILE = "PADC-IOS-FashionGallery/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,9 +551,11 @@
 		};
 		99C090C221B3B049000F6CAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 128564275D0D15AB0699CD65 /* Pods-PADC-IOS-FashionGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LUA29KCT7G;
 				INFOPLIST_FILE = "PADC-IOS-FashionGallery/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
