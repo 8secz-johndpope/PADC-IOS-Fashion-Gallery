@@ -14,6 +14,8 @@
 		8C39B82E21C4E68100685230 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C39B82D21C4E68100685230 /* GoogleService-Info.plist */; };
 		8C39B83021C4EA4B00685230 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39B82F21C4EA4B00685230 /* BaseViewController.swift */; };
 		8C39B83221C4EF2700685230 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39B83121C4EF2700685230 /* CustomButton.swift */; };
+		8C39B83421C4F99400685230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39B83321C4F99400685230 /* LoginViewController.swift */; };
+		8C39B83621C50A0800685230 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39B83521C50A0800685230 /* Extensions.swift */; };
 		8C6EBED721BEB43100C1E90A /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EBED621BEB43100C1E90A /* ShopViewController.swift */; };
 		8C6EBED921BEB9FB00C1E90A /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EBED821BEB9FB00C1E90A /* CosmosRating.swift */; };
 		8C6EBEDB21BECBCA00C1E90A /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EBEDA21BECBCA00C1E90A /* ItemViewController.swift */; };
@@ -55,6 +57,8 @@
 		8C39B82D21C4E68100685230 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C39B82F21C4EA4B00685230 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8C39B83121C4EF2700685230 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8C39B83321C4F99400685230 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8C39B83521C50A0800685230 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8C6EBED621BEB43100C1E90A /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		8C6EBED821BEB9FB00C1E90A /* CosmosRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosRating.swift; sourceTree = "<group>"; };
 		8C6EBEDA21BECBCA00C1E90A /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				8C6EBEDC21BECC1D00C1E90A /* ShopMoreViewController.swift */,
 				8CFF0F5621C4279E00EC5A8A /* DetailViewController.swift */,
 				8C39B82F21C4EA4B00685230 /* BaseViewController.swift */,
+				8C39B83321C4F99400685230 /* LoginViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				8CB0FD7121BC2ECD00190C5A /* RatingController.swift */,
 				8C6EBED821BEB9FB00C1E90A /* CosmosRating.swift */,
 				8C39B83121C4EF2700685230 /* CustomButton.swift */,
+				8C39B83521C50A0800685230 /* Extensions.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				8CB0FD6721BBB91700190C5A /* JustForYouCollectionViewCell.swift in Sources */,
 				8CFF0F5721C4279E00EC5A8A /* DetailViewController.swift in Sources */,
 				99C090B421B3B048000F6CAE /* ViewController.swift in Sources */,
+				8C39B83421C4F99400685230 /* LoginViewController.swift in Sources */,
 				8C39B82621C4DB5100685230 /* DataModel.swift in Sources */,
 				8C39B82821C4DEFF00685230 /* ShopVO.swift in Sources */,
 				8C39B82021C4DA9500685230 /* NetworkManager.swift in Sources */,
@@ -425,6 +432,7 @@
 				8CB39B1021BB80800070EED3 /* AdsCollectionViewCell.swift in Sources */,
 				99C090B221B3B048000F6CAE /* AppDelegate.swift in Sources */,
 				8CB0FD7021BBD12200190C5A /* CardView.swift in Sources */,
+				8C39B83621C50A0800685230 /* Extensions.swift in Sources */,
 				8C39B83221C4EF2700685230 /* CustomButton.swift in Sources */,
 				8CFF0F5421C40BA300EC5A8A /* PostsTableViewCell.swift in Sources */,
 				8C6EBED921BEB9FB00C1E90A /* CosmosRating.swift in Sources */,

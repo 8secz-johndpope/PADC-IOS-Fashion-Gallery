@@ -12,6 +12,7 @@ class ShopViewController: UIViewController {
     @IBOutlet weak var shopTableView: UITableView!
     var shopList : [ShopVO] = []
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         CellRegisterUtil.cellRegister(nibName: "ShopListsTableViewCell", tableView: shopTableView)
@@ -19,13 +20,15 @@ class ShopViewController: UIViewController {
     }
     
     func getAllShops() {
+        let sv = UIViewController.displaySpinner(onView: self.view)
         DataModel.shared.getShopLists(success: { (data) in
+            UIViewController.removeSpinner(spinner: sv)
             self.shopList.removeAll()
             self.shopList.append(contentsOf: data)
             self.shopTableView.reloadData()
             
         }, failure: {
-            
+            UIViewController.removeSpinner(spinner: sv)
         })
     }
 }
