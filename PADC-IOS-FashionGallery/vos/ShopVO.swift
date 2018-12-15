@@ -11,7 +11,7 @@ import UIKit
 
 class ShopVO : NSObject {
     
-    var shop_id : String? = nil
+    var shop_id : Int = 0
     
     var shop_name : String? = nil
     
@@ -24,7 +24,7 @@ class ShopVO : NSObject {
     public static func parseToShopListsVO(json : [String : Any]) -> ShopVO {
         
         let shop = ShopVO()
-        shop.shop_id = json["shop_id"] as? String
+        shop.shop_id = json["shop_id"] as? Int ?? 0
         shop.shop_contact_no = json["shop_contact_no"] as? String
         shop.shop_contact_email = json["shop_contact_email"] as? String
         shop.shop_contact_address = json["shop_contact_address"] as? String

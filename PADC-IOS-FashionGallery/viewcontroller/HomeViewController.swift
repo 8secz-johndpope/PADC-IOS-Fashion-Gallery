@@ -58,8 +58,18 @@ class HomeViewController: UIViewController {
             self.homeCollectionView)
         CellRegisterUtil.cellRegister(nibName: "JustForYouCollectionViewCell", collectionView:
             self.homeCollectionView)
+        
+        getAllFashionItem()
     }
    
+    func getAllFashionItem() {
+        DataModel.shared.getFashionItemsList(success: {
+            self.homeCollectionView.reloadData()
+        }) { (msg) in
+            
+        }
+    }
+    
     private func setupUI() {
         navigationController?.navigationBar.prefersLargeTitles = false
         //title = "Large Title"
@@ -137,7 +147,7 @@ extension HomeViewController : UICollectionViewDataSource {
         if (section == 0 || section == 1 || section == 2) {
             return 1
         }
-        return 15
+        return DataModel.shared.discountedFashionItemList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -146,12 +156,19 @@ extension HomeViewController : UICollectionViewDataSource {
             return cell
         }else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCollectionViewCell", for: indexPath) as! PopularCollectionViewCell
+            cell.popularFashionItemList = DataModel.shared.mostPopularFashionItemList
             return cell
         }else if indexPath.section == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromotionCollectionViewCell", for: indexPath) as! PromotionCollectionViewCell
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JustForYouCollectionViewCell", for: indexPath) as! JustForYouCollectionViewCell
+            
+            let item = DataModel.shared.discountedFashionItemList[indexPath.row]
+            cell.item_image.sd_setImage(with: URL(string: item.item_images[1]), placeholderImage: UIImage(named: "profile"))
+            cell.item_price.text = "$ \(item.item_price ?? "0")"
+            cell.ratingview.rating = Double(item.item_rating)
+            
             return cell
         }
     }
@@ -176,8 +193,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (indexPath.section == 3) {
             let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! UINavigationController
-            //let vc = navigationController.viewControllers[0] as! DetailViewController
-            //vc.articleData = articleList[indexPath.row]
+            let vc = navigationController.viewControllers[0] as! DetailViewController
+            vc.fashionItem = DataModel.shared.discountedFashionItemList[indexPath.row]
             self.present(navigationController, animated: true, completion: nil)
         }
     }

@@ -12,6 +12,16 @@ class ItemViewController: UIViewController {
 
     @IBOutlet weak var itemCollectionView: UICollectionView!
     var is_one : Bool = false
+    
+    var fashionItemList : [FashionItemVO] = [] {
+        didSet {
+            if let itemCollectionView = itemCollectionView {
+                itemCollectionView.reloadData()
+            }
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,13 +38,19 @@ extension ItemViewController : UICollectionViewDataSource {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 25
+        return fashionItemList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JustForYouCollectionViewCell", for: indexPath) as! JustForYouCollectionViewCell
-            return cell
+        
+        let item = fashionItemList[indexPath.row]
+        cell.item_image.sd_setImage(with: URL(string: item.item_images[0]), placeholderImage: UIImage(named: "profile"))
+        cell.item_price.text = "$ \(item.item_price ?? "0")"
+        cell.ratingview.rating = Double(item.item_rating)
+        
+        return cell
     }
     
     
@@ -56,8 +72,8 @@ extension ItemViewController : UICollectionViewDelegate, UICollectionViewDelegat
     
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! UINavigationController
-            //let vc = navigationController.viewControllers[0] as! DetailViewController
-            //vc.articleData = articleList[indexPath.row]
+            let vc = navigationController.viewControllers[0] as! DetailViewController
+            vc.fashionItem = fashionItemList[indexPath.row]
             self.present(navigationController, animated: true, completion: nil)
         }
 }
