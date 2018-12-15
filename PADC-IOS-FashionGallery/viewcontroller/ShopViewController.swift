@@ -16,6 +16,7 @@ class ShopViewController: UIViewController {
         super.viewDidLoad()
         CellRegisterUtil.cellRegister(nibName: "ShopListsTableViewCell", tableView: shopTableView)
         getAllShops()
+        
     }
     
     func getAllShops() {
@@ -28,6 +29,8 @@ class ShopViewController: UIViewController {
             
         })
     }
+    
+   
 }
 
 extension ShopViewController : UITableViewDataSource {

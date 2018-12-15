@@ -34,15 +34,35 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var shop_email: UILabel!
     
+    var fashionItem : FashionItemVO? = nil
+    
     @IBAction func back(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if fashionItem != nil {
+            bindData(item: fashionItem!)
+        }
     }
 
+    
+    func bindData(item: FashionItemVO) {
+        item_Image.sd_setImage(with: URL(string: item.item_images[0]), placeholderImage: UIImage(named: "profile"))
+        item_price.text = "$ \(item.item_price ?? "0")"
+        item_Description.text = item.item_description ?? ""
+        item_Discount.text = "\(item.item_discount_percentage) %"
+        item_Rating.rating = Double(item.item_rating)
+        item_brand.text = item.item_brand ?? ""
+        
+        //TODO - Bind cetegory name
+        
+        item_releaseddate.text = item.item_released_date ?? ""
+        
+        //TODO - Bind shop info
+        
+    }
 }

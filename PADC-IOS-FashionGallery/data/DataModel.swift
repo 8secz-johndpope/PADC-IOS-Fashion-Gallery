@@ -13,6 +13,12 @@ class DataModel {
     private init() {}
     var shop : ShopVO? = nil
     
+    var fashionItemList : [FashionItemVO] = []
+    
+    var mostPopularFashionItemList : [FashionItemVO] = []
+    
+    var discountedFashionItemList : [FashionItemVO] = []
+    
     static var shared : DataModel = {
         return sharedDataModel
     }()
@@ -32,6 +38,28 @@ class DataModel {
             failure()
         })
         
+    }
+    
+    func getFashionItemsList(success : @escaping () -> Void, failure : @escaping (String) -> Void) {
+
+        NetworkManager.shared.loadFashionItemList(success: {
+            
+            for item in self.fashionItemList {
+                if item.item_rating > 3 {
+                    self.mostPopularFashionItemList.append(item)
+                }
+                
+                if item.item_discount_percentage > 20 {
+                    self.discountedFashionItemList.append(item)
+                }
+            }
+            
+            success()
+        }) { (msg) in
+            failure(msg)
+        }
+        
+    
     }
     
 }

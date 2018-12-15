@@ -16,6 +16,8 @@ class NetworkManager {
     
     let rootRef : DatabaseReference!
     
+    
+    
     private init() {
         rootRef = Database.database().reference()
     }
@@ -46,6 +48,33 @@ class NetworkManager {
                 
                 success(shopLists)
                 
+            }
+            
+        }
+        
+    }
+    
+    func loadFashionItemList(success : @escaping () -> Void, failure : @escaping (String) -> Void) {
+        
+        rootRef.child(SharedConstants.FirebaseNode.FASHION_ITEM_LIST).observe(.value) { (dataSnapshot) in
+            
+            if let items = dataSnapshot.children.allObjects as? [DataSnapshot] {
+                
+                
+                var itemList : [FashionItemVO] = []
+                
+                for item in items {
+                    if let value = item.value as? [String : AnyObject] {
+                        itemList.append(FashionItemVO.parseToFashionItemVO(json: value))
+                    }
+                }
+                
+                DataModel.shared.fashionItemList = itemList
+                
+                success()
+                
+            } else {
+                failure("Failed to fetch fashion items")
             }
             
         }
