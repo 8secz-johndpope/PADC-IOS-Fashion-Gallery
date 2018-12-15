@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         sleep(1)
         FirebaseApp.configure()
+        
+        DataModel.shared.getItemCategoryList(success: {}) { (msg) in }
+        
+        DataModel.shared.getShopLists(success: { (data) in }, failure: {})
+        
         return true
     }
 

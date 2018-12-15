@@ -192,8 +192,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (indexPath.section == 3) {
             let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! UINavigationController
-            //let vc = navigationController.viewControllers[0] as! DetailViewController
-            //vc.articleData = articleList[indexPath.row]
+            let vc = navigationController.viewControllers[0] as! DetailViewController
+            vc.fashionItem = DataModel.shared.discountedFashionItemList[indexPath.row]
             self.present(navigationController, animated: true, completion: nil)
         }
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		519863DD21C4F34400458D02 /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519863DC21C4F34400458D02 /* SharedConstants.swift */; };
 		519863DF21C4F3CE00458D02 /* FashionItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519863DE21C4F3CE00458D02 /* FashionItemVO.swift */; };
+		519863E121C509C500458D02 /* ItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519863E021C509C500458D02 /* ItemCategory.swift */; };
 		64E02A25B7F391E90326399C /* Pods_PADC_IOS_FashionGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B63D2425814DACEF71ED14 /* Pods_PADC_IOS_FashionGallery.framework */; };
 		8C39B82021C4DA9500685230 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39B81F21C4DA9500685230 /* NetworkManager.swift */; };
 		8C39B82621C4DB5100685230 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39B82521C4DB5100685230 /* DataModel.swift */; };
@@ -53,6 +54,7 @@
 		128564275D0D15AB0699CD65 /* Pods-PADC-IOS-FashionGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PADC-IOS-FashionGallery.release.xcconfig"; path = "Target Support Files/Pods-PADC-IOS-FashionGallery/Pods-PADC-IOS-FashionGallery.release.xcconfig"; sourceTree = "<group>"; };
 		519863DC21C4F34400458D02 /* SharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
 		519863DE21C4F3CE00458D02 /* FashionItemVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionItemVO.swift; sourceTree = "<group>"; };
+		519863E021C509C500458D02 /* ItemCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategory.swift; sourceTree = "<group>"; };
 		8C39B81F21C4DA9500685230 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8C39B82521C4DB5100685230 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		8C39B82721C4DEFF00685230 /* ShopVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVO.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				8C39B82721C4DEFF00685230 /* ShopVO.swift */,
 				519863DE21C4F3CE00458D02 /* FashionItemVO.swift */,
+				519863E021C509C500458D02 /* ItemCategory.swift */,
 			);
 			path = vos;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				8C6EBEDD21BECC1D00C1E90A /* ShopMoreViewController.swift in Sources */,
 				8CB0FD7221BC2ECD00190C5A /* RatingController.swift in Sources */,
 				8CB0FD6321BBB86C00190C5A /* CategoriesCollectionViewCell.swift in Sources */,
+				519863E121C509C500458D02 /* ItemCategory.swift in Sources */,
 				8C6EBED721BEB43100C1E90A /* ShopViewController.swift in Sources */,
 				8CB0FD5F21BBB84600190C5A /* PromotionCollectionViewCell.swift in Sources */,
 				8CFF0F5021C3F42900EC5A8A /* ShopListsTableViewCell.swift in Sources */,

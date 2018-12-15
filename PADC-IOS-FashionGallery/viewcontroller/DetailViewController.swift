@@ -8,6 +8,7 @@
 
 import UIKit
 import Cosmos
+import ImageSlideshow
 
 class DetailViewController: UIViewController {
 
@@ -34,6 +35,8 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var shop_email: UILabel!
     
+    @IBOutlet weak var imageSlideShow : ImageSlideshow!
+    
     var fashionItem : FashionItemVO? = nil
     
     @IBAction func back(_ sender: UIBarButtonItem) {
@@ -52,17 +55,29 @@ class DetailViewController: UIViewController {
     
     func bindData(item: FashionItemVO) {
         item_Image.sd_setImage(with: URL(string: item.item_images[0]), placeholderImage: UIImage(named: "profile"))
+        
+        var sdWebImageSource : [SDWebImageSource] = []
+        
+        for image in item.item_images {
+            sdWebImageSource.append(SDWebImageSource(urlString: image)!)
+        }
+        imageSlideShow.setImageInputs(sdWebImageSource)
+        
         item_price.text = "$ \(item.item_price ?? "0")"
         item_Description.text = item.item_description ?? ""
         item_Discount.text = "\(item.item_discount_percentage) %"
         item_Rating.rating = Double(item.item_rating)
         item_brand.text = item.item_brand ?? ""
-        
-        //TODO - Bind cetegory name
-        
+        category_name.text = DataModel.shared.getItemCategoryNameById(categroyId: item.item_category_id)
         item_releaseddate.text = item.item_released_date ?? ""
         
         //TODO - Bind shop info
+        let shopVO = DataModel.shared.getShopVOByShopId(shopId: item.shop_id[0])
+        if shopVO != nil {
+            shop_Address.text = shopVO!.shop_contact_address
+            shop_contactno.text = shopVO!.shop_contact_no
+            shop_email.text = shopVO!.shop_contact_email
+        }
         
     }
 }

@@ -67,7 +67,8 @@ extension PopularCollectionViewCell : UICollectionViewDelegateFlowLayout, UIColl
             var mainView: UIStoryboard!
             mainView = UIStoryboard(name: "Main", bundle: nil)
             let navigationController = mainView.instantiateViewController(withIdentifier: "DetailViewController") as! UINavigationController
-            //let vc = navigationController.viewControllers[0] as! DetailViewController
+            let vc = navigationController.viewControllers[0] as! DetailViewController
+            vc.fashionItem = popularFashionItemList[indexPath.row]
             self.window?.rootViewController?.present(navigationController, animated : true)
         }
 }

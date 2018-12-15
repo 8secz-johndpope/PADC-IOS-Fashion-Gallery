@@ -12,5 +12,6 @@ class SharedConstants {
     enum FirebaseNode {
         static let SHOP_LIST = "shop_list"
         static let FASHION_ITEM_LIST = "fashion_items"
+        static let ITEM_CATEGORY_LIST = "item_category"
     }
 }
