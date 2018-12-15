@@ -499,7 +499,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+959796567066" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBg-dX-bvh">
                                         <rect key="frame" x="16" y="730.5" width="343" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shop.com.mm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03y-0J-iah">
@@ -578,10 +578,24 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="category_name" destination="aDj-qd-JPH" id="CpU-dv-HaR"/>
+                        <outlet property="item_Description" destination="3PS-eY-oGO" id="J3n-na-Jld"/>
+                        <outlet property="item_Discount" destination="H7m-yO-wy1" id="GKD-QR-eG5"/>
+                        <outlet property="item_Image" destination="W9F-lS-jsb" id="R2v-hd-ju0"/>
+                        <outlet property="item_Rating" destination="n53-Ul-rjF" id="npJ-nI-VUo"/>
+                        <outlet property="item_brand" destination="gyg-vK-6EQ" id="0UR-JZ-DFM"/>
+                        <outlet property="item_name" destination="Ukk-kH-Dqe" id="1F5-Rt-zQ6"/>
+                        <outlet property="item_price" destination="vfs-GE-pKm" id="rj0-qe-3vh"/>
+                        <outlet property="item_releaseddate" destination="o3L-7N-x69" id="K8d-p7-d2c"/>
+                        <outlet property="shop_Address" destination="kgb-sf-Ozw" id="PGw-1D-q2h"/>
+                        <outlet property="shop_contactno" destination="OBg-dX-bvh" id="fYB-vZ-83r"/>
+                        <outlet property="shop_email" destination="03y-0J-iah" id="9CL-g6-Cg8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fT-F2-iUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="2118"/>
+            <point key="canvasLocation" x="1298" y="2335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f0D-UQ-klX">
@@ -599,13 +613,39 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1W-sf-m9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="2118"/>
+            <point key="canvasLocation" x="-122" y="2335"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eTG-Wd-DT2">
+            <objects>
+                <viewController id="GS5-ni-q0o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wJm-Dc-3v4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fashionbg" translatesAutoresizingMaskIntoConstraints="NO" id="6rD-bg-LSr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gY5-P8-Hpn" firstAttribute="trailing" secondItem="6rD-bg-LSr" secondAttribute="trailing" id="Dgx-VC-Cdn"/>
+                            <constraint firstItem="6rD-bg-LSr" firstAttribute="leading" secondItem="gY5-P8-Hpn" secondAttribute="leading" id="RBG-hh-EnX"/>
+                            <constraint firstItem="gY5-P8-Hpn" firstAttribute="bottom" secondItem="6rD-bg-LSr" secondAttribute="bottom" id="V2d-bk-MdD"/>
+                            <constraint firstItem="6rD-bg-LSr" firstAttribute="top" secondItem="gY5-P8-Hpn" secondAttribute="top" id="xFE-wT-U1m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gY5-P8-Hpn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0b-hm-jcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="3445"/>
         </scene>
     </scenes>
     <resources>
         <image name="back" width="16" height="16"/>
         <image name="create" width="16" height="16"/>
         <image name="f1" width="558" height="744"/>
+        <image name="fashionbg" width="1920" height="1200"/>
         <image name="home" width="25" height="25"/>
         <image name="profilepic" width="1080" height="1349"/>
         <image name="shop" width="25" height="25"/>
