@@ -53,10 +53,13 @@ class PostItemViewController: BaseViewController{
         fashionItemVO.item_name = textFieldItemBrand.text
         fashionItemVO.item_price = textFieldDiscountPercentage.text ?? "0"
         fashionItemVO.item_size = textFieldItemSize.text ?? "M"
-        fashionItemVO.posted_by = "0"
+        fashionItemVO.posted_by = DataModel.shared.currentCustomer?.id ?? "0"
         fashionItemVO.shop_id = [Int.random(in: 1 ... 10)]
         
         DataModel.shared.addFashionItem(fashionItem: fashionItemVO, success: {
+            
+            DataModel.shared.itemPostedByUser.append(fashionItemVO)
+            
             self.showAlertDialog(inputMessage: "Item added successfully!")
         }) { (msg) in
             //Do something

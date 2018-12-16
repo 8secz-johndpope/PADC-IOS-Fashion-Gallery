@@ -33,6 +33,10 @@ class DataModel {
   
     var categoryItemMap : [Int : FashionItemVO] = [:]
     
+    var currentCustomer : CustomerVO? = nil
+    
+    var itemPostedByUser : [FashionItemVO] = []
+    
     static var shared : DataModel = {
         return sharedDataModel
     }()
@@ -159,6 +163,7 @@ class DataModel {
     
     func register(user : CustomerVO, success : @escaping () -> Void) {
         
+        currentCustomer = user
         getCustomerLists(success: { (isExist) in
             if (!isExist) {
                 let ref = Database.database().reference()
@@ -167,11 +172,22 @@ class DataModel {
             } else {
                 
             }
+            
+            self.filterUserPostedItems()
+            
         }, failure: {
             
         }, email: user.email ?? "", login_type: user.login_type ?? "")
         
         
+    }
+    
+    private func filterUserPostedItems() {
+        for item in fashionItemList {
+            if item.posted_by == currentCustomer?.id {
+                itemPostedByUser.append(item)
+            }
+        }
     }
     
     func getCustomerLists(success : @escaping (Bool) -> Void, failure : @escaping () -> Void, email : String,login_type : String) {
@@ -180,6 +196,7 @@ class DataModel {
             if self.customerList.count > 0 {
                 for customer in self.customerList {
                     if customer.email == email && customer.login_type == login_type {
+                        self.currentCustomer = customer
                         success(true)
                         break
                     } else {

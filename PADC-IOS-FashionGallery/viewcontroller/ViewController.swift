@@ -47,16 +47,16 @@ extension ViewController : UICollectionViewDataSource {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return DataModel.shared.itemPostedByUser.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JustForYouCollectionViewCell", for: indexPath) as! JustForYouCollectionViewCell
-//            let item = DataModel.shared.discountedFashionItemList[indexPath.row]
-//            cell.item_image.sd_setImage(with: URL(string: item.item_images[1]), placeholderImage: UIImage(named: "profilepic"))
-//            cell.item_price.text = "$ \(item.item_price ?? "0")"
-//            cell.ratingview.rating = Double(item.item_rating)
-            return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JustForYouCollectionViewCell", for: indexPath) as! JustForYouCollectionViewCell
+        let item = DataModel.shared.itemPostedByUser[indexPath.row]
+        cell.item_image.sd_setImage(with: URL(string: item.item_images[0]), placeholderImage: UIImage(named: "profilepic"))
+        cell.item_price.text = "$ \(item.item_price ?? "0")"
+        cell.ratingview.rating = Double(item.item_rating)
+        return cell
     }
     
     

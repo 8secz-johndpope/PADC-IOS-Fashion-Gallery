@@ -142,7 +142,7 @@ class NetworkManager {
             uploadTask.resume()
             
         }
-        
+    }
 
     func loadCustomerList(success : @escaping ([CustomerVO]) -> Void, failure : @escaping () -> Void){
         rootRef.child(SharedConstants.FirebaseNode.CUSTOMER).observe(.value) { (dataSnapshot) in
@@ -167,6 +167,8 @@ class NetworkManager {
         }
 
     }
+        
+
     
     
 }
