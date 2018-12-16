@@ -114,6 +114,7 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
 
                 
                 if let tabbar = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as? UITabBarController) {
+                    self.view.window?.rootViewController = tabbar
                     self.present(tabbar, animated: true, completion: nil)
                 }
                 

@@ -70,14 +70,15 @@ extension PromotionCollectionViewCell : UICollectionViewDelegateFlowLayout, UICo
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let selectedItemCategoryId = categoryDemoMap[indexPath.row]?.item_category_id ?? 0
+        let selectedItemCategoryId = categoryDemoMap[indexPath.row + 1]?.item_category_id ?? 0
         let fashionItemListByCategoryId = DataModel.shared.getFashionItemListByCategoryId(categoryId: selectedItemCategoryId)
+        let itemCategoryName = DataModel.shared.getItemCategoryNameById(categroyId: selectedItemCategoryId)
         
         var mainView: UIStoryboard!
         mainView = UIStoryboard(name: "Main", bundle: nil)
         let navigationController = mainView.instantiateViewController(withIdentifier: "ShopMoreViewController") as! UINavigationController
         let vc = navigationController.viewControllers[0] as! ShopMoreViewController
-        vc.title_name = "Collections"
+        vc.title_name = itemCategoryName
         vc.fashionItemList = fashionItemListByCategoryId
         self.window?.rootViewController?.present(navigationController, animated : true)
         
