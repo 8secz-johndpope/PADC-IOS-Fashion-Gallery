@@ -118,6 +118,11 @@ class HomeViewController: UIViewController {
             .translatedBy(x: xTranslation, y: yTranslation)
     }
 
+    @IBAction func onClickPostFashionItem(_ sender: Any) {
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "PostItemViewController") as! UINavigationController
+        //let vc = navigationController.viewControllers[0] as! PostItemViewController
+        self.present(navigationController, animated: true, completion: nil)
+    }
 }
 
 

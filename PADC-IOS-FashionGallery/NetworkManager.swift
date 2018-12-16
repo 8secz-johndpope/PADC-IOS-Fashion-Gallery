@@ -15,9 +15,11 @@ import FirebaseStorage
 class NetworkManager {
     
     let rootRef : DatabaseReference!
+    let storageRef : StorageReference!
     
     private init() {
         rootRef = Database.database().reference()
+        storageRef = Storage.storage().reference().child("images")
     }
     
     static var shared : NetworkManager =  {
@@ -98,6 +100,46 @@ class NetworkManager {
                 failure("Failed to fetch item category")
             }
         }
+    }
+    
+    func addFashionItem(fashionItem : FashionItemVO, success : @escaping () -> Void, failure : @escaping () -> Void) {
+        
+        rootRef.child(SharedConstants.FirebaseNode.FASHION_ITEM_LIST).child(String(DataModel.shared.fashionItemList.count)).setValue(FashionItemVO.parseToDictionary(item: fashionItem))
+        success()
+        
+    }
+    
+    func imageUpload(data : Data?, success : @escaping (String) -> Void, failure : @escaping (String) -> Void) {
+        
+        if let imageData = data {
+            
+            let uploadImageRef = storageRef.child("\(Date().millisecondsSince1970).png")
+            
+            let uploadTask = uploadImageRef.putData(imageData, metadata: nil) { (metadata, error) in
+                
+                print(metadata ?? "NO METADATA")
+                print(error ?? "NO ERROR")
+                
+                uploadImageRef.downloadURL(completion: { (url, error) in
+                    
+                    if let error = error {
+                        print(error)
+                    }
+                    
+                    success(url!.absoluteString)
+                    
+                })
+                
+            }
+            
+            uploadTask.observe(.progress) { (snapshot) in
+                print(snapshot.progress ?? "NO MORE PROGRESS")
+            }
+            
+            uploadTask.resume()
+            
+        }
+        
     }
     
     

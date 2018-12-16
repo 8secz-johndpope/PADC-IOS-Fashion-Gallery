@@ -11,6 +11,7 @@
 		519863DF21C4F3CE00458D02 /* FashionItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519863DE21C4F3CE00458D02 /* FashionItemVO.swift */; };
 		519863E121C509C500458D02 /* ItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519863E021C509C500458D02 /* ItemCategory.swift */; };
 		519863E421C6307F00458D02 /* PopularItemCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519863E321C6307F00458D02 /* PopularItemCellDelegate.swift */; };
+		519863E821C63D1900458D02 /* PostItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519863E721C63D1900458D02 /* PostItemViewController.swift */; };
 		64E02A25B7F391E90326399C /* Pods_PADC_IOS_FashionGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B63D2425814DACEF71ED14 /* Pods_PADC_IOS_FashionGallery.framework */; };
 		8C39B82021C4DA9500685230 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39B81F21C4DA9500685230 /* NetworkManager.swift */; };
 		8C39B82621C4DB5100685230 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39B82521C4DB5100685230 /* DataModel.swift */; };
@@ -59,6 +60,7 @@
 		519863DE21C4F3CE00458D02 /* FashionItemVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionItemVO.swift; sourceTree = "<group>"; };
 		519863E021C509C500458D02 /* ItemCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategory.swift; sourceTree = "<group>"; };
 		519863E321C6307F00458D02 /* PopularItemCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularItemCellDelegate.swift; sourceTree = "<group>"; };
+		519863E721C63D1900458D02 /* PostItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemViewController.swift; sourceTree = "<group>"; };
 		8C39B81F21C4DA9500685230 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8C39B82521C4DB5100685230 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		8C39B82721C4DEFF00685230 /* ShopVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVO.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				8CFF0F5621C4279E00EC5A8A /* DetailViewController.swift */,
 				8C39B82F21C4EA4B00685230 /* BaseViewController.swift */,
 				8C39B83321C4F99400685230 /* LoginViewController.swift */,
+				519863E721C63D1900458D02 /* PostItemViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				99C090B421B3B048000F6CAE /* ViewController.swift in Sources */,
 				8C39B83421C4F99400685230 /* LoginViewController.swift in Sources */,
 				8C39B82621C4DB5100685230 /* DataModel.swift in Sources */,
+				519863E821C63D1900458D02 /* PostItemViewController.swift in Sources */,
 				8C39B82821C4DEFF00685230 /* ShopVO.swift in Sources */,
 				8C39B82021C4DA9500685230 /* NetworkManager.swift in Sources */,
 				8CB0FD6B21BBD04F00190C5A /* FashionCollectionsViewCell.swift in Sources */,
