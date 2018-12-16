@@ -171,7 +171,7 @@ extension HomeViewController : UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JustForYouCollectionViewCell", for: indexPath) as! JustForYouCollectionViewCell
             
             let item = DataModel.shared.discountedFashionItemList[indexPath.row]
-            cell.item_image.sd_setImage(with: URL(string: item.item_images[1]), placeholderImage: UIImage(named: "profile"))
+            cell.item_image.sd_setImage(with: URL(string: item.item_images[0]), placeholderImage: UIImage(named: "profile"))
             cell.item_price.text = "$ \(item.item_price ?? "0")"
             cell.ratingview.rating = Double(item.item_rating)
             

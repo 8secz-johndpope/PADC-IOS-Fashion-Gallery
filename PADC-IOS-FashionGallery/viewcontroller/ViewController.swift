@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         self.view.window?.rootViewController = viewConroller
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        DataModel.shared.filterUserPostedItems()
+        userpostCollectionView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +42,6 @@ class ViewController: UIViewController {
         userpostCollectionView.dataSource = self
         CellRegisterUtil.cellRegister(nibName: "JustForYouCollectionViewCell", collectionView: userpostCollectionView)
         
-    }
-
-    @IBAction func onClickRefresh(_ sender: Any) {
-        DataModel.shared.filterUserPostedItems()
-        userpostCollectionView.reloadData()
     }
 }
 
@@ -74,8 +73,8 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDelegateFlo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! UINavigationController
-            //let vc = navigationController.viewControllers[0] as! DetailViewController
-            //vc.fashionItem = DataModel.shared.discountedFashionItemList[indexPath.row]
+            let vc = navigationController.viewControllers[0] as! DetailViewController
+            vc.fashionItem = DataModel.shared.itemPostedByUser[indexPath.row]
             self.present(navigationController, animated: true, completion: nil)
     }
 }
