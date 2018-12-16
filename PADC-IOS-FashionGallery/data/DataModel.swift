@@ -30,6 +30,8 @@ class DataModel {
     var shopList : [ShopVO] = []
     
     var customerList : [CustomerVO] = []
+  
+    var categoryItemMap : [Int : FashionItemVO] = [:]
     
     static var shared : DataModel = {
         return sharedDataModel
@@ -39,6 +41,17 @@ class DataModel {
         let dataModel = DataModel()
         return dataModel
     }()
+    
+    func getFashionItemListByCategoryId (categoryId : Int) -> [FashionItemVO] {
+        var list : [FashionItemVO] = []
+        for item in fashionItemList {
+            if item.item_category_id == categoryId {
+                list.append(item)
+            }
+        }
+        
+        return list
+    }
     
     func getShopLists(success : @escaping ([ShopVO]) -> Void, failure : @escaping () -> Void) {
         
@@ -74,6 +87,9 @@ class DataModel {
         NetworkManager.shared.loadFashionItemList(success: {
             
             for item in self.fashionItemList {
+                
+                self.categoryItemMap[item.item_category_id] = item
+                
                 if item.item_rating > 3 {
                     self.mostPopularFashionItemList.append(item)
                 }

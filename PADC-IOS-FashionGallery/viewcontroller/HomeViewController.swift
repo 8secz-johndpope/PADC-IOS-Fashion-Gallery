@@ -9,9 +9,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
+    
     private let imageView = UIImageView(image: UIImage(named: "profilepic"))
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -160,6 +160,7 @@ extension HomeViewController : UICollectionViewDataSource {
             return cell
         }else if indexPath.section == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromotionCollectionViewCell", for: indexPath) as! PromotionCollectionViewCell
+            cell.categoryDemoMap = DataModel.shared.categoryItemMap
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JustForYouCollectionViewCell", for: indexPath) as! JustForYouCollectionViewCell
