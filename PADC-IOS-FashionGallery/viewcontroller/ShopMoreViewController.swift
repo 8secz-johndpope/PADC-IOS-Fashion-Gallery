@@ -11,6 +11,8 @@ import CarbonKit
 
 class ShopMoreViewController: UIViewController, CarbonTabSwipeNavigationDelegate {
 
+    var fashionItemList : [FashionItemVO] = []
+    
     @IBAction func backHome(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -57,12 +59,12 @@ class ShopMoreViewController: UIViewController, CarbonTabSwipeNavigationDelegate
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
         if index == 0 {
             let screen = self.storyboard?.instantiateViewController(withIdentifier: "ItemViewController") as! ItemViewController
-            screen.fashionItemList = DataModel.shared.mostPopularFashionItemList
+            screen.fashionItemList = self.fashionItemList
             screen.is_one = true
             return screen
         }else {
             let screen = self.storyboard?.instantiateViewController(withIdentifier: "ItemViewController") as! ItemViewController
-            screen.fashionItemList = DataModel.shared.mostPopularFashionItemList
+            screen.fashionItemList = self.fashionItemList
             screen.is_one = false
             return screen
         }

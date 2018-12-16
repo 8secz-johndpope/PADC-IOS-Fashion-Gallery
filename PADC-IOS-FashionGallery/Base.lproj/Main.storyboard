@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GS5-ni-q0o">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GS5-ni-q0o">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -615,7 +614,7 @@
         <!--Login View Controller-->
         <scene sceneID="eTG-Wd-DT2">
             <objects>
-                <viewController id="GS5-ni-q0o" customClass="LoginViewController" customModule="PADC_IOS_FashionGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="asdfasdf" id="GS5-ni-q0o" customClass="LoginViewController" customModule="PADC_IOS_FashionGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wJm-Dc-3v4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -686,6 +685,7 @@
     </scenes>
     <resources>
         <image name="back" width="12.800000190734863" height="12.800000190734863"/>
+        <image name="bg" width="650" height="975"/>
         <image name="create" width="12" height="12"/>
         <image name="f1" width="558" height="744"/>
         <image name="home" width="25" height="25"/>

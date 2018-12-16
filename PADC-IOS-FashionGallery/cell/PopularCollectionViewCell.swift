@@ -37,6 +37,7 @@ class PopularCollectionViewCell: UICollectionViewCell {
         mainView = UIStoryboard(name: "Main", bundle: nil)
         let navigationController = mainView.instantiateViewController(withIdentifier: "ShopMoreViewController") as! UINavigationController
         let vc = navigationController.viewControllers[0] as! ShopMoreViewController
+        vc.fashionItemList = popularFashionItemList
         vc.title_name = "Most Popular"
         self.window?.rootViewController?.present(navigationController, animated : true)
         
