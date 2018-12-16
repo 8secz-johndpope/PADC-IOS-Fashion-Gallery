@@ -48,6 +48,7 @@ class HomeViewController: UIViewController {
         
         homeCollectionView.dataSource = self
         homeCollectionView.delegate = self
+        imageView.sd_setImage(with: URL(string:UserDefaults.standard.string(forKey: "image") ?? ""), placeholderImage: UIImage(named: "profilepic"))
         setupUI()
         CellRegisterUtil.cellRegister(nibName: "AdsCollectionViewCell", collectionView:
             self.homeCollectionView)

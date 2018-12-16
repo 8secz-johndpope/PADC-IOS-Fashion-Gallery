@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.postTableView.separatorStyle = .none
+        userImage.sd_setImage(with: URL(string:UserDefaults.standard.string(forKey: "image") ?? ""), placeholderImage: UIImage(named: "profilepic"))
+        userName.text = UserDefaults.standard.string(forKey: "name")
+        emailAddress.text = UserDefaults.standard.string(forKey: "email")
         userImage.layer.cornerRadius = userImage.frame.size.width/2
         userImage.clipsToBounds = true
         CellRegisterUtil.cellRegister(nibName: "PostsTableViewCell", tableView: postTableView)
