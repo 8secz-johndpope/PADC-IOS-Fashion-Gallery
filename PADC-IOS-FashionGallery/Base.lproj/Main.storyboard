@@ -55,24 +55,27 @@
                                     <constraint firstItem="TyI-LN-FEO" firstAttribute="leading" secondItem="FZs-v5-o6H" secondAttribute="leading" id="yEr-rj-daf"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4WQ-nt-pX0">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kHh-8L-VeF">
                                 <rect key="frame" x="0.0" y="299" width="375" height="319"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e6a-Cn-o32"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LZb-mP-FtL"/>
-                                </connections>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Uwx-v4-rVs">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kHh-8L-VeF" secondAttribute="trailing" id="3dU-P6-rCV"/>
+                            <constraint firstItem="kHh-8L-VeF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DcO-Xz-dN5"/>
                             <constraint firstItem="FZs-v5-o6H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fpz-w8-MGC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kHh-8L-VeF" secondAttribute="bottom" id="ZoF-3H-TOx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FZs-v5-o6H" secondAttribute="trailing" id="dBT-sU-CHi"/>
-                            <constraint firstItem="4WQ-nt-pX0" firstAttribute="top" secondItem="FZs-v5-o6H" secondAttribute="bottom" id="dlp-Uy-8mh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4WQ-nt-pX0" secondAttribute="bottom" id="fJF-tW-V2B"/>
+                            <constraint firstItem="kHh-8L-VeF" firstAttribute="top" secondItem="FZs-v5-o6H" secondAttribute="bottom" id="fzI-cw-dXt"/>
                             <constraint firstItem="FZs-v5-o6H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gMP-V2-cOO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4WQ-nt-pX0" secondAttribute="trailing" id="npj-K6-Zmh"/>
-                            <constraint firstItem="4WQ-nt-pX0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wdU-MW-br0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -86,9 +89,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailAddress" destination="FuU-0y-klf" id="dKZ-98-qj1"/>
-                        <outlet property="postTableView" destination="4WQ-nt-pX0" id="x2F-Ic-HYs"/>
                         <outlet property="userImage" destination="3Yl-da-xuC" id="DCX-vJ-3Wh"/>
                         <outlet property="userName" destination="TyI-LN-FEO" id="jns-P1-1w2"/>
+                        <outlet property="userpostCollectionView" destination="kHh-8L-VeF" id="2Tz-Ae-wYi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

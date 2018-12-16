@@ -18,8 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailAddress: UILabel!
     
     
-    @IBOutlet weak var postTableView: UITableView!
-    
+    @IBOutlet weak var userpostCollectionView: UICollectionView!
     
     @IBAction func logout(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -30,34 +29,49 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.postTableView.separatorStyle = .none
         userImage.sd_setImage(with: URL(string:UserDefaults.standard.string(forKey: "image") ?? ""), placeholderImage: UIImage(named: "profilepic"))
         userName.text = UserDefaults.standard.string(forKey: "name")
         emailAddress.text = UserDefaults.standard.string(forKey: "email")
         userImage.layer.cornerRadius = userImage.frame.size.width/2
         userImage.clipsToBounds = true
-        CellRegisterUtil.cellRegister(nibName: "PostsTableViewCell", tableView: postTableView)
+        userpostCollectionView.delegate = self
+        userpostCollectionView.dataSource = self
+        CellRegisterUtil.cellRegister(nibName: "JustForYouCollectionViewCell", collectionView: userpostCollectionView)
         
     }
 
 }
 
-extension ViewController : UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+extension ViewController : UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell", for: indexPath) as! PostsTableViewCell
-        return cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JustForYouCollectionViewCell", for: indexPath) as! JustForYouCollectionViewCell
+//            let item = DataModel.shared.discountedFashionItemList[indexPath.row]
+//            cell.item_image.sd_setImage(with: URL(string: item.item_images[1]), placeholderImage: UIImage(named: "profilepic"))
+//            cell.item_price.text = "$ \(item.item_price ?? "0")"
+//            cell.ratingview.rating = Double(item.item_rating)
+            return cell
     }
     
     
 }
 
-extension ViewController : UITableViewDelegate {
+extension ViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let width = (self.view.frame.width/2 - 4) + 4
+            return CGSize(width: width, height: width * 1.4)
+    }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! UINavigationController
+            //let vc = navigationController.viewControllers[0] as! DetailViewController
+            //vc.fashionItem = DataModel.shared.discountedFashionItemList[indexPath.row]
+            self.present(navigationController, animated: true, completion: nil)
+    }
 }

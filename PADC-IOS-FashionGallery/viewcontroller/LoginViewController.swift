@@ -16,7 +16,10 @@ import FBSDKLoginKit
 class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
+        let sv = UIViewController.displaySpinner(onView: self.view)
+
         if (error) != nil {
+            UIViewController.removeSpinner(spinner: sv)
             print("An error occured during Google Authentication")
             return
         }
@@ -27,6 +30,7 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
         
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
             if let error = error {
+                UIViewController.removeSpinner(spinner: sv)
                 self.showAlertDialog(inputMessage: error.localizedDescription)
                 return
             }
@@ -41,6 +45,7 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
             }
             self.registerToFirebase(name: UserDefaults.standard.string(forKey: "name") ?? "",email: UserDefaults.standard.string(forKey: "email") ?? "",image: UserDefaults.standard.string(forKey: "image") ?? "",type: "google")
             if let tabbar = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as? UITabBarController) {
+                UIViewController.removeSpinner(spinner: sv)
                 self.view.window?.rootViewController = tabbar;
                 self.present(tabbar, animated: true, completion: nil)
             }
@@ -110,6 +115,7 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
     
     func getFbId(){
         if(FBSDKAccessToken.current() != nil){
+            let sv = UIViewController.displaySpinner(onView: self.view)
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id,name , first_name, last_name , email,picture.type(large)"]).start(completionHandler: { (connection, result, error) in
                 guard let Info = result as? [String: Any] else { return }
                 if let imageURL = ((Info["picture"] as? [String: Any])?["data"] as? [String: Any])?["url"] as? String {
@@ -127,11 +133,13 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
                 self.registerToFirebase(name: UserDefaults.standard.string(forKey: "name") ?? "",email: UserDefaults.standard.string(forKey: "email") ?? "",image: UserDefaults.standard.string(forKey: "image") ?? "",type: "facebook")
 
                 if let tabbar = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as? UITabBarController) {
+                    UIViewController.removeSpinner(spinner: sv)
                     self.view.window?.rootViewController = tabbar;
                     self.present(tabbar, animated: true, completion: nil)
                 }
                 
                 if(error == nil){
+                    UIViewController.removeSpinner(spinner: sv)
                     print("result")
                 }
                 
