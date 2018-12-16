@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DataModel.shared.getShopLists(success: { (data) in }, failure: {})
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-
+        
         return true
     }
     

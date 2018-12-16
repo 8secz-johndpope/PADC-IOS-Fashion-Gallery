@@ -685,9 +685,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="16" height="16"/>
-        <image name="bg" width="650" height="975"/>
-        <image name="create" width="16" height="16"/>
+        <image name="back" width="12.800000190734863" height="12.800000190734863"/>
+        <image name="create" width="12" height="12"/>
         <image name="f1" width="558" height="744"/>
         <image name="home" width="25" height="25"/>
         <image name="profilepic" width="1080" height="1349"/>
