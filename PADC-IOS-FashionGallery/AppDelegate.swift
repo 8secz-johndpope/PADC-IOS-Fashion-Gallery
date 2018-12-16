@@ -20,12 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         sleep(1)
         FirebaseApp.configure()
-
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
- 
+        
         DataModel.shared.getItemCategoryList(success: {}) { (msg) in }
         
         DataModel.shared.getShopLists(success: { (data) in }, failure: {})
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         
         return true
     }
