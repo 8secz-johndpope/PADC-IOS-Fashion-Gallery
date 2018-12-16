@@ -13,19 +13,21 @@ var imagePicker = UIImagePickerController()
 
 class BaseViewController: UIViewController {
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
-    func chooseUpload(_ sender: UIBarButtonItem, imagePickerControllerDelegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) {
+    func chooseUpload(_ sender: UIButton, imagePickerControllerDelegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) {
         
         let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            self.openCamera(imagePickerControllerDelegate: imagePickerControllerDelegate)
-        }))
-        
+//        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+//            self.openCamera(imagePickerControllerDelegate: imagePickerControllerDelegate)
+//        }))
+//        
         alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
             self.openGallary(imagePickerControllerDelegate: imagePickerControllerDelegate)
         }))
@@ -61,4 +63,5 @@ class BaseViewController: UIViewController {
         self.present(imagePicker, animated: true)
     }
     
+
 }
