@@ -119,6 +119,8 @@ class DataModel {
                 }
             }
             
+            self.filterUserPostedItems()
+            
             success()
         }) { (msg) in
             failure(msg)
@@ -173,7 +175,7 @@ class DataModel {
                 
             }
             
-            self.filterUserPostedItems()
+
             
         }, failure: {
             
@@ -182,12 +184,15 @@ class DataModel {
         
     }
     
-    private func filterUserPostedItems() {
+    func filterUserPostedItems() {
+        var items : [FashionItemVO] = []
         for item in fashionItemList {
-            if item.posted_by == currentCustomer?.id {
-                itemPostedByUser.append(item)
+            if item.posted_by == currentCustomer?.email {
+                items.append(item)
             }
         }
+        
+        itemPostedByUser = items
     }
     
     func getCustomerLists(success : @escaping (Bool) -> Void, failure : @escaping () -> Void, email : String,login_type : String) {

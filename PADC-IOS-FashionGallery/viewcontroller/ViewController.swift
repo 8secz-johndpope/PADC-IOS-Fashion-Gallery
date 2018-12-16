@@ -40,6 +40,10 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func onClickRefresh(_ sender: Any) {
+        DataModel.shared.filterUserPostedItems()
+        userpostCollectionView.reloadData()
+    }
 }
 
 extension ViewController : UICollectionViewDataSource {
