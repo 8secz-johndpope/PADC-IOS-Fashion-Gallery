@@ -39,8 +39,9 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
                 let pic = user.profile.imageURL(withDimension: 300)
                 UserDefaults.standard.set(pic?.absoluteString ?? "" , forKey: "image")
             }
-            
+            self.registerToFirebase(name: UserDefaults.standard.string(forKey: "name") ?? "",email: UserDefaults.standard.string(forKey: "email") ?? "",image: UserDefaults.standard.string(forKey: "image") ?? "",type: "google")
             if let tabbar = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as? UITabBarController) {
+                self.view.window?.rootViewController = tabbar;
                 self.present(tabbar, animated: true, completion: nil)
             }
         }
@@ -57,6 +58,16 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
         dismiss(animated: true) {() -> Void in }
     }
 
+    func registerToFirebase(name:String,email:String,image:String,type:String) {
+        let user = CustomerVO()
+        user.name = name
+        user.email = email
+        user.image_url = image
+        user.login_type = type
+        DataModel.shared.register(user: user, success: {
+            //self.showAlertDialog(inputMessage: "Account Created")
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +107,7 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
         
     }
     
+    
     func getFbId(){
         if(FBSDKAccessToken.current() != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id,name , first_name, last_name , email,picture.type(large)"]).start(completionHandler: { (connection, result, error) in
@@ -112,8 +124,10 @@ class LoginViewController : BaseViewController, GIDSignInDelegate, GIDSignInUIDe
                 UserDefaults.standard.set(Info["name"] as? String ?? "", forKey: "name")
                 UserDefaults.standard.set(Info["email"] as? String ?? "", forKey: "email")
 
-                
+                self.registerToFirebase(name: UserDefaults.standard.string(forKey: "name") ?? "",email: UserDefaults.standard.string(forKey: "email") ?? "",image: UserDefaults.standard.string(forKey: "image") ?? "",type: "facebook")
+
                 if let tabbar = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as? UITabBarController) {
+                    self.view.window?.rootViewController = tabbar;
                     self.present(tabbar, animated: true, completion: nil)
                 }
                 

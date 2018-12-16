@@ -20,6 +20,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var postTableView: UITableView!
     
+    
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+         let viewConroller = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        self.view.window?.rootViewController = viewConroller
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.postTableView.separatorStyle = .none
