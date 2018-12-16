@@ -45,5 +45,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PADC-IOS-FashionGallery/data/DataModel.swift"
+            timestampString = "566647513.576248"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "getItemCategoryList(success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PADC_IOS_FashionGallery.DataModel.getItemCategoryList(success: () -&gt; (), failure: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "PADC-IOS-FashionGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shweyeetub/Desktop/IOS-6/Project/PADC-IOS-Fashion-Gallery/PADC-IOS-FashionGallery/data/DataModel.swift"
+                  timestampString = "566647420.3464431"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in PADC_IOS_FashionGallery.DataModel.getItemCategoryList(success: () -&gt; (), failure: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "PADC-IOS-FashionGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shweyeetub/Desktop/IOS-6/Project/PADC-IOS-Fashion-Gallery/PADC-IOS-FashionGallery/data/DataModel.swift"
+                  timestampString = "566647420.349703"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

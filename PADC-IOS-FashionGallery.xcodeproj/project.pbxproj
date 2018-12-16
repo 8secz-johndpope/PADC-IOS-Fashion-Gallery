@@ -41,6 +41,7 @@
 		8CB39B1021BB80800070EED3 /* AdsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB39B0E21BB80800070EED3 /* AdsCollectionViewCell.swift */; };
 		8CB39B1121BB80800070EED3 /* AdsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB39B0F21BB80800070EED3 /* AdsCollectionViewCell.xib */; };
 		8CC9045421BAD80F00479128 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9045321BAD80F00479128 /* HomeViewController.swift */; };
+		8CEDCD9021C63C920043446D /* CustomerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDCD8F21C63C920043446D /* CustomerVO.swift */; };
 		8CFF0F5021C3F42900EC5A8A /* ShopListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF0F4E21C3F42900EC5A8A /* ShopListsTableViewCell.swift */; };
 		8CFF0F5121C3F42900EC5A8A /* ShopListsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFF0F4F21C3F42900EC5A8A /* ShopListsTableViewCell.xib */; };
 		8CFF0F5421C40BA300EC5A8A /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF0F5221C40BA300EC5A8A /* PostsTableViewCell.swift */; };
@@ -89,6 +90,7 @@
 		8CB39B0E21BB80800070EED3 /* AdsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CB39B0F21BB80800070EED3 /* AdsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsCollectionViewCell.xib; sourceTree = "<group>"; };
 		8CC9045321BAD80F00479128 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8CEDCD8F21C63C920043446D /* CustomerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerVO.swift; sourceTree = "<group>"; };
 		8CFF0F4E21C3F42900EC5A8A /* ShopListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListsTableViewCell.swift; sourceTree = "<group>"; };
 		8CFF0F4F21C3F42900EC5A8A /* ShopListsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopListsTableViewCell.xib; sourceTree = "<group>"; };
 		8CFF0F5221C40BA300EC5A8A /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				8C39B82721C4DEFF00685230 /* ShopVO.swift */,
 				519863DE21C4F3CE00458D02 /* FashionItemVO.swift */,
 				519863E021C509C500458D02 /* ItemCategory.swift */,
+				8CEDCD8F21C63C920043446D /* CustomerVO.swift */,
 			);
 			path = vos;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				8C39B83221C4EF2700685230 /* CustomButton.swift in Sources */,
 				8CFF0F5421C40BA300EC5A8A /* PostsTableViewCell.swift in Sources */,
 				8C6EBED921BEB9FB00C1E90A /* CosmosRating.swift in Sources */,
+				8CEDCD9021C63C920043446D /* CustomerVO.swift in Sources */,
 				8CC9045421BAD80F00479128 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

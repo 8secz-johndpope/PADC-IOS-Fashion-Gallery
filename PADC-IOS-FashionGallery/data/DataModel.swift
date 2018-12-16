@@ -29,6 +29,8 @@ class DataModel {
     
     var shopList : [ShopVO] = []
     
+    var customerList : [CustomerVO] = []
+  
     var categoryItemMap : [Int : FashionItemVO] = [:]
     
     static var shared : DataModel = {
@@ -153,6 +155,47 @@ class DataModel {
             return itemCategoryNameMap[categroyId] ?? "Empty Category Name"
         }
         return "Unkonwn Category Name"
+    }
+    
+    func register(user : CustomerVO, success : @escaping () -> Void) {
+        
+        getCustomerLists(success: { (isExist) in
+            if (!isExist) {
+                let ref = Database.database().reference()
+        ref.child(SharedConstants.FirebaseNode.CUSTOMER).child(user.id).setValue(CustomerVO.parseToDictionary(user: user))
+                success()
+            } else {
+                
+            }
+        }, failure: {
+            
+        }, email: user.email ?? "", login_type: user.login_type ?? "")
+        
+        
+    }
+    
+    func getCustomerLists(success : @escaping (Bool) -> Void, failure : @escaping () -> Void, email : String,login_type : String) {
+        NetworkManager.shared.loadCustomerList(success: { (data) in
+            self.customerList = data
+            if self.customerList.count > 0 {
+                for customer in self.customerList {
+                    if customer.email == email && customer.login_type == login_type {
+                        success(true)
+                        break
+                    } else {
+                        success(false)
+                    }
+                    
+                }
+            } else {
+                success(false)
+            }
+            
+            
+        }, failure: {
+            failure()
+        })
+        
     }
     
 }
