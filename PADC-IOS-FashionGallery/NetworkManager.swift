@@ -31,7 +31,7 @@ class NetworkManager {
     
     func loadShopLists(success : @escaping ([ShopVO]) -> Void, failure : @escaping () -> Void) {
         
-        rootRef.child("shop_list").observe(.value) { (dataSnapshot) in
+        rootRef.child(SharedConstants.FirebaseNode.SHOP_LIST).observe(.value) { (dataSnapshot) in
             
             if let shops = dataSnapshot.children.allObjects as? [DataSnapshot] {
                 
@@ -46,6 +46,8 @@ class NetworkManager {
                 
                 success(shopLists)
                 
+            } else {
+                failure()
             }
             
         }
@@ -97,6 +99,29 @@ class NetworkManager {
             } else {
                 failure("Failed to fetch item category")
             }
+        }
+    }
+    
+    func loadCustomerList(success : @escaping ([CustomerVO]) -> Void, failure : @escaping () -> Void){
+        rootRef.child(SharedConstants.FirebaseNode.CUSTOMER).observe(.value) { (dataSnapshot) in
+            
+            if let customers = dataSnapshot.children.allObjects as? [DataSnapshot] {
+                
+                var customerLists : [CustomerVO] = []
+                
+                for customer in customers {
+                    
+                    if let value = customer.value as? [String : AnyObject] {
+                        customerLists.append(CustomerVO.parseToCustomerVO(json: value))
+                    }
+                }
+                
+                success(customerLists)
+                
+            } else {
+                failure()
+            }
+            
         }
     }
     

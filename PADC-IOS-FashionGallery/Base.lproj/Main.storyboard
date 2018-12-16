@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GS5-ni-q0o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GS5-ni-q0o">
+
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,7 +77,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Account" id="1D9-G3-cGm"/>
+                    <navigationItem key="navigationItem" title="Account" id="1D9-G3-cGm">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" image="logout" id="mz9-Wn-vQQ">
+                            <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logout:" destination="BYZ-38-t0r" id="lwT-tI-qcO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailAddress" destination="FuU-0y-klf" id="dKZ-98-qj1"/>
                         <outlet property="postTableView" destination="4WQ-nt-pX0" id="x2F-Ic-HYs"/>
@@ -684,11 +692,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="12.800000190734863" height="12.800000190734863"/>
+        <image name="back" width="16" height="16"/>
         <image name="bg" width="650" height="975"/>
-        <image name="create" width="12" height="12"/>
+        <image name="create" width="16" height="16"/>
         <image name="f1" width="558" height="744"/>
         <image name="home" width="25" height="25"/>
+        <image name="logout" width="25" height="25"/>
         <image name="profilepic" width="1080" height="1349"/>
         <image name="shop" width="25" height="25"/>
         <image name="user" width="25" height="25"/>
