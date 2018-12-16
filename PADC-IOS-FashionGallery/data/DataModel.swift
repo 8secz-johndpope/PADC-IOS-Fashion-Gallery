@@ -53,6 +53,22 @@ class DataModel {
         return list
     }
     
+    func addFashionItem(fashionItem : FashionItemVO, success : @escaping() -> Void, failure : @escaping(String) -> Void) {
+        NetworkManager.shared.addFashionItem(fashionItem: fashionItem, success: {
+            success()
+        }) {
+            failure("Failed to add new item.")
+        }
+    }
+    
+    func uploadImage(data : Data?, success: @escaping (String)-> Void, failure: @escaping(String)->Void) {
+        NetworkManager.shared.imageUpload(data: data, success: { (url) in
+            success(url)
+        }) {msg in
+            failure(msg)
+        }
+    }
+    
     func getShopLists(success : @escaping ([ShopVO]) -> Void, failure : @escaping () -> Void) {
         
         NetworkManager.shared.loadShopLists(success: { (data) in
