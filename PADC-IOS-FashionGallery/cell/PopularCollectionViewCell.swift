@@ -14,6 +14,12 @@ class PopularCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var popularshopmore: UILabel!
     @IBOutlet weak var lbl_popular: UILabel!
     
+    var popularFashionItemList : [FashionItemVO] = [] {
+        didSet {
+            popularcollectionview.reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         popularcollectionview.delegate = self
@@ -40,11 +46,14 @@ class PopularCollectionViewCell: UICollectionViewCell {
 
 extension PopularCollectionViewCell : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return popularFashionItemList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
+        let fashionItem = popularFashionItemList[indexPath.row]
+        cell.item_name.text = fashionItem.item_name
+        cell.item_image.sd_setImage(with: URL(string: fashionItem.item_images[0]), placeholderImage: UIImage(named: ""))
         return cell
     }
     
@@ -58,7 +67,8 @@ extension PopularCollectionViewCell : UICollectionViewDelegateFlowLayout, UIColl
             var mainView: UIStoryboard!
             mainView = UIStoryboard(name: "Main", bundle: nil)
             let navigationController = mainView.instantiateViewController(withIdentifier: "DetailViewController") as! UINavigationController
-            //let vc = navigationController.viewControllers[0] as! DetailViewController
+            let vc = navigationController.viewControllers[0] as! DetailViewController
+            vc.fashionItem = popularFashionItemList[indexPath.row]
             self.window?.rootViewController?.present(navigationController, animated : true)
         }
 }

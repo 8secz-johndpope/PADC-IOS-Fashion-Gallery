@@ -18,8 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        sleep(5)
+        sleep(1)
         FirebaseApp.configure()
+        
+        DataModel.shared.getItemCategoryList(success: {}) { (msg) in }
+        
+        DataModel.shared.getShopLists(success: { (data) in }, failure: {})
+        
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
 
         return true
